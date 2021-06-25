@@ -1,26 +1,23 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from './components/home'
-import Navbar from './components/nav'
-import Footer from './components/footer'
-import Ubication from './components/ubication'
-import Us from './components/us'
-import Contact from './components/contact'
-import Information from './components/information'
-require('dotenv').config()
-//import './App.css';
+import { BrowserRouter, Route } from "react-router-dom";
+import Background from "./components/background";
+import Navbar from "./components/nav";
+import Contact from "./components/contact";
+import Spa from "./Spa";
+import Info from "./components/information";
+import Us from "./components/us";
+require("dotenv").config();
 
 function App() {
   return (
     <BrowserRouter>
-    <Route path="/" component={Navbar} />
-    <Switch>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/ubicacion" component={Ubication} />
-    <Route exact path="/nosotros" component={Us} />
-    <Route exact path="/informacion" component={Information} />
-    <Route exact path="/contacto" component={Contact} />
-    </Switch>
-    <Route path="/" component={Footer} />
+      <Route path="/" component={Background} />
+      <Route path="/" component={Navbar} />
+      <Route exact path="/" component={Spa} />
+      <Route exact path="/informacion" component={Info} />
+      <Route exact path="/contacto" component={Contact} />
+      <Route exact path="/ubicacion" component={Contact} />
+      <Route exact path="/nosotros" component={Us} />
+      {/* <Route path="/" component={Footer} /> */}
     </BrowserRouter>
   );
 }

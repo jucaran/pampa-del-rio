@@ -1,33 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import logo from "../../media/logo.png";
+import logo from "../../media/logo.svg";
 import { HomeContainer } from "./style";
-
+import { Cta } from "../utils";
 
 export default function Home() {
   return (
-    <div>
-      <HomeContainer>
-        <div className="bkg"></div>
-        <div className="dark_blur">
-            <div className="text">
-          <div className="hero_txt">
-            <p>Hacé la inversión</p>
-            <p className="p2">correcta</p>
-            <Link to={`/`}>
-            <button
-              className="moreButton">
-              <div>VER MÁS</div>
-            </button>
-            </Link>
-          </div>
-          <div className="logo_container">
-            <img src={logo} alt="pampa" />
-        
-          </div>
-          </div>
+    <HomeContainer id="home">
+      <div className="container">
+        <div className="hero_txt">
+          <h1 className="title">Hacé la inversión correcta.</h1>
+          <p className="subtitle">
+            Lo importante está acá, lo demás esta cerca.
+          </p>
         </div>
-      </HomeContainer>
-    </div>
+        <div className="logo_container">
+          <img src={logo} className="logo" alt="Pampas del Rio" />
+        </div>
+      </div>
+      <Cta text="VER MÁS" to="nosotros" />
+    </HomeContainer>
   );
 }

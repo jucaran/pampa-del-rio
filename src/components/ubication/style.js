@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import { colors } from "../utils";
-const { black, whitish, primaryColor, primaryColorDarker } = colors;
+
 
 export const MapContainer = styled.section`
-  color: ${whitish};
-  background: none;
-  overflow: hidden;
-  height: 79vh;
-
-  justify-content:center;
-  align-items:center;
-  align-content: center
+height: 100%; 
+width: 100%;
+border-radius: 10px;
+display:flex;
+justify-content: center;
+align-items: center;
+background-color: rgba(163, 189, 49, 0.4);
 `
